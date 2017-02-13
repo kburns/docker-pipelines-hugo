@@ -1,6 +1,6 @@
-# Pipelines Hugo
+# Docker Pipelines Hugo
 
-This is a fork of the `pipelines-hugo` repository by Karel Bemelmans, primarily updating it to use newer versions of Hugo.
+This is a fork of the `docker-pipelines-hugo` repository by Karel Bemelmans, primarily updating it to use newer versions of Hugo.
 
 Original readme:
 
