@@ -9,6 +9,7 @@ RUN apk add --update --no-cache \
         curl \
         python \
         py-pip \
+        py-pygments \
         wget &&\
     pip install -U awscli
 
