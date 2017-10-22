@@ -22,5 +22,5 @@ ARG HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hu
 RUN curl -Ls ${HUGO_URL} -o /tmp/hugo.tar.gz &&\
     echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum -c - &&\
     tar xf /tmp/hugo.tar.gz -C /tmp &&\
-    mv /tmp/hugo*/hugo* /usr/bin/hugo &&\
+    mv /tmp/hugo /usr/bin/hugo &&\
     rm -rf /tmp/hugo*
