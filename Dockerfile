@@ -7,7 +7,6 @@ RUN apk add --update --no-cache \
         bash \
         ca-certificates \
         curl \
-        python \
         py-pip \
         py-pygments \
         wget &&\
