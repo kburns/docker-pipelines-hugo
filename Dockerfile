@@ -14,9 +14,9 @@ RUN apk add --update --no-cache \
     pip install -U awscli
 
 # Set hugo version
-ARG HUGO_VERSION=0.30.2
-ARG HUGO_SHA256=a192577471f2c5b7a6f26ce8ec6effd9e274ffb8672c1a810af0a6384b4de8cd
-ARG HUGO_URL=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+ARG HUGO_VERSION=0.78.2
+ARG HUGO_SHA256=6c139580bf42dd66615f61cb33d62fc47cb855790d744050d78924bf1f48df0d
+ARG HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 # Install hugo
 RUN curl -Ls ${HUGO_URL} -o /tmp/hugo.tar.gz &&\
