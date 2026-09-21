@@ -23,3 +23,4 @@ RUN curl -Ls ${HUGO_URL} -o /tmp/hugo.tar.gz &&\
     tar xf /tmp/hugo.tar.gz -C /tmp &&\
     mv /tmp/hugo /usr/bin/hugo &&\
     rm -rf /tmp/hugo*
+
