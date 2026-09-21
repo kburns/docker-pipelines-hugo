@@ -3,14 +3,13 @@ MAINTAINER Keaton Burns <keaton.burns@gmail.com>
 # Based on pipelines-hugo from Karel Bemelmans
 
 # Install AWS CLI and other necessary packages
-RUN apk add --update --no-cache \
+RUN apk add --no-cache \
+        aws-cli \
         bash \
         ca-certificates \
         curl \
-        py-pip \
-        py-pygments \
-        wget &&\
-    pip install -U awscli
+        py3-pygments \
+        wget
 
 # Set hugo version
 ARG HUGO_VERSION=0.78.2
@@ -19,7 +18,7 @@ ARG HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}
 
 # Install hugo
 RUN curl -Ls ${HUGO_URL} -o /tmp/hugo.tar.gz &&\
-    echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum -c - &&\
+    echo "${HUGO_SHA256} /tmp/hugo.tar.gz" | sha256sum -c - &&\
     tar xf /tmp/hugo.tar.gz -C /tmp &&\
     mv /tmp/hugo /usr/bin/hugo &&\
     rm -rf /tmp/hugo*
